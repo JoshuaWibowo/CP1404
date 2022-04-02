@@ -15,6 +15,11 @@ def fahrenheit_to_celsius(celsius_input):
     return fahrenheit_output
 
 
+def celsius_to_fahrenheit(fahrenheit_input):
+    celsius_output = 5 / 9 * (fahrenheit_input - 32)
+    return celsius_output
+
+
 while choice != "Q":
     if choice == "C":
         celsius = float(input("Celsius: "))
@@ -22,7 +27,7 @@ while choice != "Q":
         print("Result: {:.2f} F".format(fahrenheit))
     elif choice == "F":
         fahrenheit = float(input("Fahrenheit: "))
-        celsius = 5 / 9 * (fahrenheit - 32)
+        celsius = celsius_to_fahrenheit(fahrenheit)
         print("Result: {:.2f} C".format(celsius))
         # TODO: Write this section to convert F to C and display the result
         # Hint: celsius = 5 / 9 * (fahrenheit - 32)
