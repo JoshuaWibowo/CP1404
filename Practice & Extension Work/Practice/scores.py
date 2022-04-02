@@ -12,11 +12,13 @@ LIMIT_EXCELLENT = 90
 
 
 def main():
-    # score = float(input("Enter score: "))
-    score = float(random.randint(0, 100))
-    print(f"Your score: {score}")
-    result = check_score(score)
-    print(f"Your result: {result}")
+    no_of_scores = int(input("How many score? "))
+    repeats = 0
+    while repeats != no_of_scores:
+        score = float(random.randint(0, 100))
+        result = check_score(score)
+        print(f"{score} is {result}")
+        repeats += 1
 
 
 def check_score(score):
