@@ -15,9 +15,11 @@ def main():
     no_of_scores = int(input("How many score? "))
     repeats = 0
     while repeats != no_of_scores:
+        result_file = open("results.txt", "a")
         score = float(random.randint(0, 100))
         result = check_score(score)
-        print(f"{score} is {result}")
+        print(f"{score} is {result}", file=result_file)
+        result_file.close()
         repeats += 1
 
 
