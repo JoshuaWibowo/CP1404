@@ -13,6 +13,11 @@ LIMIT_EXCELLENT = 90
 
 def main():
     score = float(input("Enter score: "))
+    result = check_score(score)
+    print(result)
+
+
+def check_score(score):
     if LIMIT_MIN <= score <= LIMIT_MAX:
         if score >= LIMIT_EXCELLENT:
             result = "Excellent"
@@ -22,7 +27,7 @@ def main():
             result = "Bad"
     else:
         result = "Invalid score"
-    print(result)
+    return result
 
 
 main()
