@@ -4,6 +4,7 @@ Broken program to determine score status
 """
 
 # TODO: Fix this!
+import random
 
 LIMIT_MIN = 0
 LIMIT_MAX = 100
@@ -12,9 +13,11 @@ LIMIT_EXCELLENT = 90
 
 
 def main():
-    score = float(input("Enter score: "))
+    # score = float(input("Enter score: "))
+    score = float(random.randint(0, 100))
+    print(f"Your score: {score}")
     result = check_score(score)
-    print(result)
+    print(f"Your result: {result}")
 
 
 def check_score(score):
