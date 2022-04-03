@@ -1,9 +1,14 @@
 def main():
     """main function"""
     input_file = open("temps_input.txt", "r")
-    for line in input_file:
-        print(line)
+    output_file = open("temps_output.txt", "w")
+    line = input_file.read().splitlines()
+    for i in line:
+        i = float(i)
+        celsius = fahrenheit_to_celsius(i)
+        print(celsius, file=output_file)
     input_file.close()
+    output_file.close()
 
 
 def celsius_to_fahrenheit(fahrenheit_input):
