@@ -13,3 +13,7 @@ print(f"The last number is {last_num}")
 print(f"The smallest number is {smallest_num}")
 print(f"The largest number is {largest_num}")
 print(f"The average of the numbers is {average_num}")
+
+usernames = ['jimbo', 'giltson98', 'derekf', 'WhatSup', 'NicolEye', 'swei45', 'BaseInterpreterInterface',
+             'BaseStdIn', 'Command', 'ExecState', 'InteractiveConsole',
+             'InterpreterInterface', 'StartServer', 'bob']
