@@ -13,4 +13,5 @@ while user_email != "":
         user_name[name] = user_name[name].title()
     if len(user_name) > 1:
         user_name = " ".join(user_name)
+    email_to_name[user_name] = user_email
     user_email = input("Email: ")
