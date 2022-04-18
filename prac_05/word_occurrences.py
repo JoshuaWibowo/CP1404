@@ -1,3 +1,8 @@
+"""
+CP1404/CP5632 Practical
+Count word in a text
+"""
+
 text = input("Text: ")
 words = text.split(" ")
 word_to_count = {word: 0 for word in words}
