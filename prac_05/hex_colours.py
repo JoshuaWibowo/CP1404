@@ -8,3 +8,5 @@ CODE_TO_COLOUR = {"Black": "#000000", "OrangeRed1": "#ff4500",
                   "Blue1": "#0000ff", "Cyan1": "#00ffff",
                   "Gold1": "#ffd700", "GhostWhite": "#f8f8ff",
                   "Harlequin": "#3fff00", "NeonGreen": "#39ff14"}
+for key in CODE_TO_COLOUR:
+    print(f"{key:<10} is {CODE_TO_COLOUR[key]:<}")
