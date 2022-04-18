@@ -1,3 +1,8 @@
+"""
+CP1404/CP5632 Practical
+Store email and name in a dictionary
+"""
+
 email_to_name = {}
 user_email = input("Email: ")
 while user_email != "":
