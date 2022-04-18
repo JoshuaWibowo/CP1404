@@ -6,4 +6,4 @@ for word in words:
 sorted_values = sorted(word_to_count.items(), key=lambda x: x[0])
 sorted_values = dict(sorted_values)
 for key in sorted_values:
-    print(f"{key:<} : {sorted_values[key]}")
+    print(f"{key:<10} : {sorted_values[key]:<}")
