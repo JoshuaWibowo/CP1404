@@ -3,5 +3,7 @@ words = text.split(" ")
 word_to_count = {word: 0 for word in words}
 for word in words:
     word_to_count[word] += 1
-for key in word_to_count:
-    print(f"{key:<} : {word_to_count[key]}")
+sorted_values = sorted(word_to_count.items(), key=lambda x: x[0])
+sorted_values = dict(sorted_values)
+for key in sorted_values:
+    print(f"{key:<} : {sorted_values[key]}")
