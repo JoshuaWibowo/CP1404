@@ -18,7 +18,7 @@ while user_email != "":
         name = user_name.title()
     else:
         name = user_name[0].title()
-    user_name_isvalid = input(f"Is your name {name}? (Y/n)")
+    user_name_isvalid = input(f"Is your name {name}? (Y/n) ")
     user_name_isvalid = user_name_isvalid.upper()
     if user_name_isvalid in YES:
         email_to_name[name] = user_email
@@ -26,3 +26,7 @@ while user_email != "":
         user_name = input("Name: ")
         email_to_name[name] = user_email
     user_email = input("Email: ")
+
+print("")
+for usr_name in email_to_name:
+    print(f"{usr_name} ({email_to_name[usr_name]})")
