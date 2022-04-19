@@ -15,7 +15,6 @@ def main():
         user_name = user_email.split("@")
         user_name = user_name[0]
         user_name = user_name.split(".")
-        name = ""
         if len(user_name) > 1:
             user_name = " ".join(user_name)
             name = user_name.title()
@@ -26,7 +25,7 @@ def main():
         if user_name_isvalid in YES:
             email_to_name[name] = user_email
         elif user_name_isvalid in NO:
-            user_name = input("Name: ")
+            name = input("Name: ")
             email_to_name[name] = user_email
         user_email = input("Email: ")
     print("")
