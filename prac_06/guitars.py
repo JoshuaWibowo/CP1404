@@ -11,3 +11,8 @@ class Guitar:
     def __str__(self):
         """Print format that gives guitar information."""
         return f"{self.name} ({self.year}) : ${self.cost:,}"
+
+    def get_age(self):
+        """Get guitar age."""
+        return 2022 - self.year
+
