@@ -11,5 +11,11 @@ def main():
     print(python)
     print(visual_basic)
 
+    programming_languages = [ruby, python, visual_basic]
+    print("The dynamically typed languages are:")
+    for pl in programming_languages:  # pl stands for programming language
+        if pl.is_dynamic():
+            print(pl.field)
+
 
 main()
