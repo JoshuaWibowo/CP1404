@@ -19,7 +19,7 @@ def main():
     my_limo.add_fuel(20)
     print("fuel =", my_limo.fuel)
     my_limo.drive(115)
-    print(f"My limo odometer: {my_limo.odometer}")
+    print(f"My limo odometer: {my_limo.odometer} km")
 
 
 main()
