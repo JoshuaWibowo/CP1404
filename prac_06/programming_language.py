@@ -4,8 +4,9 @@
 class ProgrammingLanguage:
     """Represent programming language."""
 
-    def __init__(self, typing, reflection, year):
+    def __init__(self, field, typing, reflection, year):
         """Initialize a programming language information instance."""
+        self.field = field
         self.typing = typing
         self.reflection = reflection
         self.year = year
