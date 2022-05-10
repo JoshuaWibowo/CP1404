@@ -24,13 +24,25 @@ class MilesToKmApp(App):
 
     def handle_convert(self, value):
         """Handle calculation when pressed"""
-        result = float(value) * MILES_TO_KM
+        result = self.get_valid_value()
+        result = result * MILES_TO_KM
         self.root.ids.output_label.text = str(result)
 
-    def handle_increment(self, value, change):
-        value = float(value) + change
+    def handle_increment(self, change):
+        """Handle the increase/decrease in the value"""
+        value = self.get_valid_value()
+        value += change
         self.root.ids.input_number.text = str(int(value))
         self.handle_convert(value)
+
+    def get_valid_value(self):
+        """Check if value is valid"""
+        try:
+            value = float(self.root.ids.input_number.text)
+            return value
+        except ValueError:
+            return 0
+
 
 
 MilesToKmApp().run()
