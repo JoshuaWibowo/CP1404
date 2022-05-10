@@ -12,9 +12,13 @@ from kivy.core.window import Window
 
 class MilesToKmApp(App):
     """App that convert miles to km"""
+
     def build(self):
         """Build app"""
         Window.size = (720, 480)
         self.title = "Miles to Km"
         self.root = Builder.load_file('convert_miles_km.kv')
         return self.root
+
+
+MilesToKmApp().run()
