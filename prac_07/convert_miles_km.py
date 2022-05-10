@@ -22,8 +22,13 @@ class MilesToKmApp(App):
 
     def handle_convert(self, value):
         """Handle calculation when pressed"""
-        result = value * 1.60934
+        result = float(value) * 1.60934
         self.root.ids.output_label.text = str(result)
+
+    def handle_increment(self, value, change):
+        value = float(value) + change
+        self.root.ids.input_number.text = str(int(value))
+        self.handle_convert(value)
 
 
 MilesToKmApp().run()
