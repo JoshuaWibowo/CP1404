@@ -15,6 +15,11 @@ class DynamicLabelsApp(App):
     """Main program - Kivy app to demo dynamic labels creation."""
     status_text = StringProperty()
 
+    def __init__(self, **kwargs):
+        """Construct main app."""
+        super().__init__(**kwargs)
+        self.name_dict = {"Joshua", "Timothy", "James", "Michael"}
+
     def build(self):
         """Build the Kivy GUI."""
         self.title = "Dynamic Labels"
