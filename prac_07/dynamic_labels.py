@@ -7,7 +7,7 @@ Started 5/10/2022
 
 from kivy.app import App
 from kivy.lang import Builder
-from kivy.uix.button import Button
+from kivy.uix.label import Label
 from kivy.properties import StringProperty
 
 
@@ -25,6 +25,12 @@ class DynamicLabelsApp(App):
         self.title = "Dynamic Labels"
         self.root = Builder.load_file('dynamic_labels.kv')
         return self.root
+
+    def create_labels(self):
+        """Create labels from dictionary"""
+        for name in self.name_dict:
+            name_label = Label(text=name)
+            self.root.ids.main.add_label(name_label)
 
 
 DynamicLabelsApp().run()
