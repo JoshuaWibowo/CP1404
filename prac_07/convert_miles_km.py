@@ -9,6 +9,8 @@ from kivy.app import App
 from kivy.lang import Builder
 from kivy.core.window import Window
 
+MILES_TO_KM = 1.60934
+
 
 class MilesToKmApp(App):
     """App that convert miles to km"""
@@ -22,7 +24,7 @@ class MilesToKmApp(App):
 
     def handle_convert(self, value):
         """Handle calculation when pressed"""
-        result = float(value) * 1.60934
+        result = float(value) * MILES_TO_KM
         self.root.ids.output_label.text = str(result)
 
     def handle_increment(self, value, change):
