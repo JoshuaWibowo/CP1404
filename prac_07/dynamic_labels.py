@@ -8,12 +8,10 @@ Started 5/10/2022
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.uix.label import Label
-from kivy.properties import StringProperty
 
 
 class DynamicLabelsApp(App):
     """Main program - Kivy app to demo dynamic labels creation."""
-    status_text = StringProperty()
 
     def __init__(self, **kwargs):
         """Construct main app."""
@@ -24,13 +22,14 @@ class DynamicLabelsApp(App):
         """Build the Kivy GUI."""
         self.title = "Dynamic Labels"
         self.root = Builder.load_file('dynamic_labels.kv')
+        self.create_labels()
         return self.root
 
     def create_labels(self):
         """Create labels from dictionary"""
         for name in self.name_dict:
             name_label = Label(text=name)
-            self.root.ids.main.add_label(name_label)
+            self.root.ids.main.add_widget(name_label)
 
 
 DynamicLabelsApp().run()
