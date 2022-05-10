@@ -20,5 +20,10 @@ class MilesToKmApp(App):
         self.root = Builder.load_file('convert_miles_km.kv')
         return self.root
 
+    def handle_convert(self, value):
+        """Handle calculation when pressed"""
+        result = value * 1.60934
+        self.root.ids.output_label.text = str(result)
+
 
 MilesToKmApp().run()
