@@ -13,6 +13,13 @@ from kivy.properties import StringProperty
 
 class DynamicLabelsApp(App):
     """Main program - Kivy app to demo dynamic labels creation."""
+    status_text = StringProperty()
+
+    def build(self):
+        """Build the Kivy GUI."""
+        self.title = "Dynamic Labels"
+        self.root = Builder.load_file('dynamic_labels.kv')
+        return self.root
 
 
 DynamicLabelsApp().run()
