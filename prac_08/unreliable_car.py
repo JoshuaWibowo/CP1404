@@ -3,6 +3,7 @@ CP1404/CP5632 Practical
 Unreliable car class
 """
 from prac_08.car import Car
+import random
 
 
 class UnreliableCar(Car):
@@ -15,5 +16,8 @@ class UnreliableCar(Car):
 
     def drive(self, distance):
         """Drive like parent Car but add reliability variable."""
-        distance_driven = super().drive(distance)
+        if random.randint(0, 100) < self.reliability:
+            distance_driven = super().drive(distance)
+        else:
+            distance_driven = 0
         return distance_driven
