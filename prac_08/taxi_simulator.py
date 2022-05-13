@@ -13,6 +13,7 @@ def main():
              SilverServiceTaxi("Hummer", 200, 4)]
     menu = "q)uit, c)hoose taxi, d)rive"
     current_taxi = None
+    user_bill = 0
 
     print("Let's drive!")
     print(menu)
@@ -27,6 +28,7 @@ def main():
         else:
             print("Invalid choice")
 
+        print(f"Bill to date: ${user_bill:.2f}")
         print(menu)
         user_input = input(">>> ").lower()
 
