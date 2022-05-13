@@ -32,17 +32,21 @@ def main():
             if current_taxi is None:
                 print("You need to choose a taxi before you can drive")
             else:
+                current_taxi.start_fare()
                 distance = int(input("Drive how far? "))
                 current_taxi.drive(distance)
                 user_bill += current_taxi.get_fare()
                 print(f"Your {current_taxi.name} trip cost you ${current_taxi.get_fare():.2f}")
-
         else:
             print("Invalid choice")
 
         print(f"Bill to date: ${user_bill:.2f}")
         print(menu)
         user_input = input(">>> ").lower()
+    print(f"Total trip cost: ${user_bill:.2f}")
+    print(f"Taxis are now: ")
+    for taxi in range(len(taxis)):
+        print(f"{taxi} - {taxis[taxi]}")
 
 
 main()
