@@ -22,6 +22,11 @@ def main():
         if user_input == "c":
             for taxi in range(len(taxis)):
                 print(f"{taxi} - {taxis[taxi]}")
+            user_taxi = int(input("Choose taxi: "))
+            if user_taxi not in range(len(taxis)):
+                print("Invalid taxi choice")
+            else:
+                current_taxi = taxis[user_taxi]
 
         elif user_input == "d":
             if current_taxi is None:
