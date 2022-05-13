@@ -20,7 +20,8 @@ def main():
     user_input = input(">>> ").lower()
     while user_input != "q":
         if user_input == "c":
-            print("ok")
+            for taxi in range(len(taxis)):
+                print(f"{taxi} - {taxis[taxi]}")
 
         elif user_input == "d":
             if current_taxi is None:
