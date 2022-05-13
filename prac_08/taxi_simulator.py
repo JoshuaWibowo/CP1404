@@ -21,17 +21,14 @@ def main():
         if user_input == "c":
             print("ok")
 
-            print(menu)
-            user_input = input(">>> ").lower()
         elif user_input == "d":
             print("ok")
 
-            print(menu)
-            user_input = input(">>> ").lower()
         else:
             print("Invalid choice")
-            print(menu)
-            user_input = input(">>> ").lower()
+
+        print(menu)
+        user_input = input(">>> ").lower()
 
 
 main()
