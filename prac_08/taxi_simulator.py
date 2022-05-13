@@ -16,6 +16,22 @@ def main():
 
     print("Let's drive!")
     print(menu)
+    user_input = input(">>> ").lower()
+    while user_input != "q":
+        if user_input == "c":
+            print("ok")
+
+            print(menu)
+            user_input = input(">>> ").lower()
+        elif user_input == "d":
+            print("ok")
+
+            print(menu)
+            user_input = input(">>> ").lower()
+        else:
+            print("Invalid choice")
+            print(menu)
+            user_input = input(">>> ").lower()
 
 
 main()
