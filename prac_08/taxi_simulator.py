@@ -23,7 +23,8 @@ def main():
             print("ok")
 
         elif user_input == "d":
-            print("ok")
+            if current_taxi is None:
+                print("You need to choose a taxi before you can drive")
 
         else:
             print("Invalid choice")
