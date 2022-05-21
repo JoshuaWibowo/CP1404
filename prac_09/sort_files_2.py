@@ -16,8 +16,10 @@ def main():
     extensions = set(extensions)
 
     for extension in extensions:
+        category = input(f"What category would you like to sort {extension} files into? ")
+
         try:
-            os.mkdir(extension)
+            os.mkdir(category)
         except FileExistsError:
             pass
 
@@ -26,7 +28,7 @@ def main():
             if os.path.isdir(filename):
                 continue
             if extension == filename[-(len(extension)):]:
-                shutil.move(filename, f'{extension}/' + filename)
+                shutil.move(filename, f'{category}/' + filename)
 
 
 main()
