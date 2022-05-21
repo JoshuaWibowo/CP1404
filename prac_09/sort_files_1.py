@@ -29,5 +29,4 @@ def main():
                 shutil.move(filename, f'{extension}/' + filename)
 
 
-
 main()
