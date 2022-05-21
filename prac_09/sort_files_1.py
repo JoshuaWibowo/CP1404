@@ -21,6 +21,13 @@ def main():
         except FileExistsError:
             pass
 
+        for filename in os.listdir('.'):
+            # Ignore directories, just process files
+            if os.path.isdir(filename):
+                continue
+            if extension == filename[-(len(extension)):]:
+                shutil.move(filename, f'{extension}/' + filename)
+
 
 
 main()
